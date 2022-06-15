@@ -3,13 +3,15 @@ let title = document.querySelector('#title')
 let body = document.querySelector('#body')
 let postForm = document.querySelector('#post-form')
 
+
 let postBox = [];
 
 function getPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
     .then((data) => {
-    console.log(postBox)
+    console.log(data)
+
     let postHolder = ''
     postBox = data;
     postBox.forEach(post => {
@@ -35,6 +37,7 @@ function getPosts() {
 
 }
 
+//delete post
 getPosts()
 
 
@@ -49,7 +52,7 @@ function deletePost(id) {
     let postHolder = ""
     console.log(postBox)
 
-    postBox.forEach(post =>{
+    postBox.forEach(post => {
         postHolder +=
         `
         <div class="col-md-6 col-lg-4 mb-3">
@@ -72,14 +75,12 @@ function deletePost(id) {
 });
 }
 
+//update post
 function updatePost() {
     fetch('https://jsonplaceholder.typicode.com/posts/1', {
         method: 'PATCH',
         body: JSON.stringify({
-            id:1,
-            title: title.value,
-            body: body.value,
-            userId: 2,
+        title: title.value,
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -111,7 +112,9 @@ function updatePost() {
     });
     }
 
+//create post
 
+postForm.addEventListener('submit', createPost)
 
 function createPost(e) {
     e.preventDefault();
