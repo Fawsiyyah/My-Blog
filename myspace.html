@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>My Space</title>
 </head>
@@ -31,7 +33,7 @@
                                 <a class="nav-link text-danger" href="myspace.html">My Space</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Resources</a>
+                                <a class="nav-link text-danger" href="resource.html">Resources</a>
                             </li>
                     </div>
                 </div>
@@ -63,15 +65,42 @@
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label"></label>
                                 <textarea class="form-control" id="body" placeholder="Start Writing" rows="3"></textarea required>
+                                    <div class="icons border">
+                                        <span class="iconify me-2" data-icon="iconoir:bold"></span>
+                                        <span class="iconify me-2" data-icon="mdi-light:format-italic"></span>
+                                        <span class="iconify me-2" data-icon="majesticons:underline-line"></span>
+                                        <span class="iconify me-2" data-icon="ri:font-size"></span>
+                                        <span class="iconify-1 align" data-icon="bi:filter-left"></span>
+                                        <span class="iconify me-2" data-icon="codicon:list-filter"></span>
+                                        <span class="iconify me-2" data-icon="clarity:bullet-list-line"></span>
+                                        <span class="iconify me-2" data-icon="bx:paragraph"></span>
+                                        <span class="iconify me-2 align" data-icon="eva:link-fill"></span>
+                                        <span class="iconify me-2" data-icon="ci:image"></span>
+                                        <span class="iconify me-1" data-icon="codicon:smiley"></span>
+                                        <span class="iconify me-1" data-icon="ant-design:plus-outlined"></span>
+                                        <span class="iconify undo" data-icon="lucide:undo"></span>
+                                        <span class="iconify me-2" data-icon="majesticons:redo-line"></span>
+                                        <span class="iconify me-2" data-icon="carbon:overflow-menu-vertical"></span>
+                                     </div>
                             </div>
-                            <div class="">
-                                <button class="btn btn-outline-primary" type="submit">Create Post</button>
-                                <button class="btn btn-outline-danger">Delete</button>
-                                <button class="btn btn-outline-primary">View post</button>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn d-none d-lg-block btn-outline-primary" type="submit">Create Post</button>
+                                <button class="btn d-none d-lg-block btn-outline-danger">Delete</button>
+                                <button class="btn d-none d-lg-block btn-outline-primary">View post</button>
+                                <button class=" p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-primary" type="submit">Create Post</button>
+                                <button class="p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-danger">Delete</button>
+                                <button class="p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-primary">View post</button>
                             </div>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mt-5 mb-5">
+                <h6 class="resource text-center text-primary"><b>In dilemma as to what to write? Do not worry we got you!</h6></b>
+                <p class="resource text-center">Check out our <a href="resource.html" class="text-danger">Resource</a> page</p>
             </div>
         </div>
         <section id="footer" class="text-danger bg-dark p-5">

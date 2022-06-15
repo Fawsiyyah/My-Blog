@@ -19,11 +19,8 @@ body {
     background-attachment: fixed;
 }
 
-.title {
-    font-family:"DancingScript",cursive;
-}
 
-.quote, .welcome {
+.quote, .welcome, .resource, .title {
     font-family: 'Dancing Script',cursive;
 }
 
