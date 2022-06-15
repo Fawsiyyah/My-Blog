@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale = 1.0">
+        <title>login</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/signup.css">
+    </head>
+    <body>
+        <div class="heroes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-2">
+                    <div class="mb-3 create">
+                        <h4 class="text-center mt-5 login-header">Sign in to your account</h2>
+                    </div>
+                    <form py-5>
+                         <div class="mb-3">
+                            <input id="email" type="email" placeholder="Email" class="form-control py-3" required>
+                        </div>
+                        <div class="input-box mb-2">
+                            <input type="password" id="password1" class=" py-3 form-control" placeholder="password" required>
+                            <div class="eye-box">
+                                <span class="eye" onclick = "password1()">
+                                    <i class="fa-solid fa-eye" id="hide_1"></i>
+                                    <i class="fa-solid fa-eye-slash" id="hide_2"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-light btn-lg py-2 button form-control"> <a href="myspace.html" class="text-light d-none d-lg-block create-btn">Login</a></button>
+                        </div>
+                    </form>
+                    <div class="mb-3 text-center">
+                        <p>Don't have an account?<a href="signup.html" class="text-warning"> Sign up now! </a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1">
+                    <div class="img-box d-none d-lg-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://kit.fontawesome.com/c9d8178e6e.js" crossorigin="anonymous"></script>
+        <script src="js/login_password_verification.js"></script>
+    </body>
+
+</html> 

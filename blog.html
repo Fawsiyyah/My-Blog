@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-light">
+        <div id="navigation section">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container">
+                    <a class="navbar-brand text-danger fw-normal display-1" href="#">i-Write</a>
+                    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-danger" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="myspace.html">My Space</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Resources</a>
+                            </li>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="card-section mt-5">
+            <div class="container">
+                <div class="row pt-2" id="post-holder">
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="card">
+                            <div class="card-body bg-dark text-light">
+                                <h6 id="post-title" class="text-center">post title</h6>
+                                <p id="post-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo cupiditate laborum,
+                                    soluta debitis iure dolore iusto adipisci optio ipsam, sint amet dolorem possimus
+                                    voluptatum. Voluptate cumque possimus autem alias maiores.</p>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary">Update</button>
+                                    <button class="btn btn-outline-danger">Delete</button>
+                                    <button class="btn btn-outline-primary">View post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <section id="footer" class="text-danger bg-dark p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-info">
+                        <h3 class="text-danger">i-Write</h3>
+                        <p>
+                            A108 Adam Street NY 535022, USA
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                        </div>
+                </div>
+                    <div class="col-lg-6 col-md-6 footer-newsletter">
+                        <h4  class="text-danger">Our Newsletter</h4>
+                        <p>We think you would love our Newsletter, Subscribe now!</p>
+                        <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" class=" p-1 rounded-pill btn-danger" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
