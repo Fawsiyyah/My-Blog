@@ -20,7 +20,7 @@ body {
 }
 
 
-.quote, .welcome, .resource, .title {
+.quote, .welcome, .resource, .title, .blog {
     font-family: 'Dancing Script',cursive;
 }
 
@@ -35,4 +35,11 @@ body {
 
 .button {
     width: 20%;
+}
+
+.resources {
+    background: linear-gradient(0deg, rgba(12,3,3,0.932)), url(../img/resource-background.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
