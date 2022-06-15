@@ -101,7 +101,7 @@ function updatePost() {
                                     <div class="d-flex justify-content-between">
                                         <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
                                         <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
-                                        <button class="btn btn-outline-primary" onclick="viewPost"(${post.id})">View post</button>
+                                        <button class="btn btn-outline-primary" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
                                     </div>
                                 </div>
                             </div>

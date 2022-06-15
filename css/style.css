@@ -24,10 +24,6 @@ body {
     font-family: 'Dancing Script',cursive;
 }
 
-.others::selection {
-    color: blue;
-}
-
 .images {
     width: 100%;
     height: 100%;
@@ -35,10 +31,12 @@ body {
 
 .button {
     width: 20%;
+    margin: auto;
+    text-align: center;
 }
 
 .resources {
-    background: linear-gradient(0deg, rgba(12,3,3,0.932)), url(../img/resource-background.jfif);
+    background:  url(../img/inspired.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
