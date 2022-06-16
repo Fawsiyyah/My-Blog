@@ -69,7 +69,6 @@ function deletePost(id) {
                                 <h4 id="post-title" class="text-center text-primary">${post.title}</h4>
                                 <p id="post-body">${post.body}</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
                                     <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
                                     <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
                                     <button class="btn btn-outline-primary" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
