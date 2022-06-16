@@ -1,10 +1,17 @@
 let postWrapper = document.querySelector('#post-holder');
+let postForm = document.querySelector('#post-form')
 let title = document.querySelector('#title')
 let body = document.querySelector('#body')
-let postForm = document.querySelector('#post-form')
+
 
 
 let postBox = [];
+
+/*let postsArray = {}
+const titleInput = document.getElementById("title")
+const bodyInput = document.getElementById("body")
+const form = document.getElementById("post-form")*/
+
 
 function getPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -56,16 +63,14 @@ function deletePost(id) {
         postHolder +=
         `
         <div class="col-md-6 col-lg-4 mb-3">
-                        <div class="card">
+                        <div class="card h-100">
                             <div class="card-body bg-dark text-light">
                                 <p>${post.id}</p>
                                 <h4 id="post-title" class="text-center text-primary">${post.title}</h4>
                                 <p id="post-body">${post.body}</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
                                     <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
-                                    <button class="btn btn-outline-primary" onclick="viewPost"(${post.id})">View post</button>
-                                </div>
+                             </div>
                             </div>
                         </div>
                     </div>
@@ -156,3 +161,29 @@ function createPost(e) {
         postWrapper.innerHTML = postHolder
     });
 }
+
+/*document.getElementById("post-form").addEventListener("submit", funtion(e)); {
+    e.prevenDefault ()
+    const postTitle = titleInput.value
+    const postBody = bodyInput.value
+    const data = {
+        titleInput: title,
+        bodyInput: body
+    }
+
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+    fetch('https://jsonplaceholder.typicode.com/posts', options)
+    .then((res) => res.json())
+    .then(post => {
+        postsArray.unshift(post)
+        renderPosts()
+
+        form.reset()
+    })
+}*/ 
