@@ -59,7 +59,7 @@
 }
 
 @media(max-width:320px){
-    .small-text, .name, .mo-button {
+    .small-text, .name {
         font-size: 8px;
     }
 }
