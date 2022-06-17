@@ -56,7 +56,7 @@ function createPost(e) {
                             <h6 id="post-title" class="write">${post.title}</h6>
                             <p id="post-body" class="blog">${post.body}</p>
                             <div class="d-flex justify-content-between">
-                                 <button class="btn btn-outline-primary write" id="view-btn onclick="viewPost(${post.id})">View</button>
+                                 <button class="btn btn-outline-primary write create-btn" id="view-btn onclick="viewPost(${post.id})">View</button>
                                  <button class="btn btn-outline-danger write" onclick="deletePost(${post.id})">Delete</button>
                                 <button class="btn btn-outline-primary write" onclick="updatePost(${post.id})">Update</button>
                             </div>
@@ -115,7 +115,7 @@ function updatePost(id) {
 
 }
 
-function openSpace(id) {
+/*function openSpace(id) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
     .then((response) => response.json())
     .then((data) => {
@@ -124,7 +124,7 @@ function openSpace(id) {
         window.location.href = 'myspace.html'
         //console.log(data)
     });
-}
+//}*/
 
 
 //delete post
@@ -157,7 +157,7 @@ function deletePost(id) {
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-outline-primary write" onclick="updatePost(${post.id})">Update</button>
                                     <button class="btn btn-outline-danger write" onclick="deletePost(${post.id})">Delete</button>
-                                    <button class="btn btn-outline-primary write" id="view-btn" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
+                                    <button class="btn btn-outline-primary write" id="view-btn" onclick="viewPost"(${post.id})"><a href="resource.html" class="create-btn">View post</a></button>
                              </div>
                             </div>
                         </div>
