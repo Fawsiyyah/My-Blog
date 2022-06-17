@@ -53,12 +53,12 @@ function createPost(e) {
                     <div class="card h-100">
                         <div class="card-body">
                             <p>${post.id}</p>
-                            <h6 id="post-title">${post.title}</h6>
-                            <p id="post-body">${post.body}</p>
+                            <h6 id="post-title" class="write">${post.title}</h6>
+                            <p id="post-body" class="blog">${post.body}</p>
                             <div class="d-flex justify-content-between">
-                                 <button class="btn btn-outline-primary" id="view-btn onclick="viewPost(${post.id})">View</button>
-                                 <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
-                                <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
+                                 <button class="btn btn-outline-primary write" id="view-btn onclick="viewPost(${post.id})">View</button>
+                                 <button class="btn btn-outline-danger write" onclick="deletePost(${post.id})">Delete</button>
+                                <button class="btn btn-outline-primary write" onclick="updatePost(${post.id})">Update</button>
                             </div>
                         </div>
                     </div>
@@ -151,13 +151,13 @@ function deletePost(id) {
                     <div class="col-md-6 col-lg-4 mb-3">
                         <div class="card h-100">
                             <div class="card-body bg-dark text-light">
-                                <p>${post.id}</p>
+                                <p class="blog">${post.id}</p>
                                 <h4 id="post-title" class="text-center text-primary">${post.title}</h4>
-                                <p id="post-body">${post.body}</p>
+                                <p id="post-body" class="blog">${post.body}</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
-                                    <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
-                                    <button class="btn btn-outline-primary" id="view-btn" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
+                                    <button class="btn btn-outline-primary write" onclick="updatePost(${post.id})">Update</button>
+                                    <button class="btn btn-outline-danger write" onclick="deletePost(${post.id})">Delete</button>
+                                    <button class="btn btn-outline-primary write" id="view-btn" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
                              </div>
                             </div>
                         </div>
