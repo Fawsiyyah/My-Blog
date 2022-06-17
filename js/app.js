@@ -49,7 +49,7 @@ function createPost(e) {
         let postHolder = '';
         postBox.forEach(post => {
             postHolder += `
-                <div class="col-md-4 mb-3">
+                <div class="col-lg-6 mb-3">
                     <div class="card h-100">
                         <div class="card-body">
                             <p>${post.id}</p>
@@ -148,7 +148,7 @@ function deletePost(id) {
              arr.forEach(post => {
                  postHolder +=
                     `
-                    <div class="col-md-6 col-lg-4 mb-3">
+                    <div class="col-lg-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body bg-dark text-light">
                                 <p class="blog">${post.id}</p>
