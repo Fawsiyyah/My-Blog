@@ -19,8 +19,11 @@ body {
     background-attachment: fixed;
 }
 
+.quote, .small-text, .write {
+    font-family: 'Inconsolata';
+}
 
-.quote, .welcome, .resource, .title, .blog {
+ .welcome, .resource, .title, .blog, .name {
     font-family: 'Dancing Script',cursive;
 }
 

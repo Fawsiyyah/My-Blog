@@ -15,7 +15,7 @@
         <div class="navigation section">
             <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 <div class="container">
-                    <a class="navbar-brand text-danger fw-normal display-1" href="#">i-Write</a>
+                    <a class="navbar-brand text-danger fw-normal display-1 write" href="#">i-Write</a>
                     <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -24,16 +24,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-danger" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link active text-danger write" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="blog.html">Blog</a>
+                                <a class="nav-link text-danger write" href="blog.html">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="myspace.html">My Space</a>
+                                <a class="nav-link text-danger write" href="myspace.html">My Space</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="resource.html">Resources</a>
+                                <a class="nav-link text-danger write" href="resource.html">Resources</a>
                             </li>
                     </div>
                 </div>
@@ -41,26 +41,24 @@
         </div>
         <div class="py-5">
             <div class="container">
-                <h1>My First Post</h1>
+                <h1 class="write">A New Post</h1>
                 <div class="row">
                     <div class="col-md-6">
                         <form action="" id="post-form">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"></label>
-                                <input type="text" class="form-control" id="title"
+                                <input type="text" class="form-control blog" id="title"
                                     placeholder="enter a title" required>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label"></label>
-                                <textarea class="form-control" id="body" placeholder="Start Writing" rows="3"></textarea required>
+                                <textarea class="form-control blog" id="body" placeholder="Start Writing" rows="3"></textarea required>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <button class="btn d-none d-lg-block btn-outline-primary" type="submit">Create Post</button>
-                                <button class="btn d-none d-lg-block btn-outline-danger">Delete</button>
-                                <button class="btn d-none d-lg-block btn-outline-primary">View post</button>
-                                <button class=" p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-primary" type="submit">Create Post</button>
-                                <button class="p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-danger">Delete</button>
-                                <button class="p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-primary">View post</button>
+                                <button class="btn d-none d-lg-block btn-outline-primary write" type="submit">Create Post</button>
+                                <button class="btn d-none d-lg-block btn-outline-danger">Delete Post</button>
+                                <button class=" p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-primary write" type="submit">Create Post</button>
+                                <button class="p-2 btn-small d-lg-none d-xl-block d-xl-none btn-outline-danger write"type="submit">Delete Post</button>
                             </div>
                         </form>
                     </div>
@@ -73,14 +71,14 @@
                     <div class="col-md-6 col-lg-4 ">
                         <div class="card">
                             <div class="card-body bg-dark text-light">
-                                <h6 id="post-title" class="text-center">post title</h6>
-                                <p id="post-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo cupiditate laborum,
+                                <h6 id="post-title" class="write text-center">Post Title</h6>
+                                <p id="post-body" class="blog">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo cupiditate laborum,
                                     soluta debitis iure dolore iusto adipisci optio ipsam, sint amet dolorem possimus
                                     voluptatum. Voluptate cumque possimus autem alias maiores.</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-outline-primary">Update</button>
-                                    <button class="btn btn-outline-danger">Delete</button>
-                                    <button class="btn btn-outline-primary"> View post</a></button>
+                                    <button class="btn btn-outline-primary write">Update</button>
+                                    <button class="btn btn-outline-danger write">Delete</button>
+                                    <button class="btn btn-outline-primary write"> View post</a></button>
                                 </div>
                             </div>
                         </div>
@@ -94,8 +92,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="footer-info">
-                        <h3 class="text-danger">i-Write</h3>
-                        <p>
+                        <h3 class="text-danger write">i-Write</h3>
+                        <p class="write">
                             A108 Adam Street NY 535022, USA
                             <strong>Phone:</strong> +1 5589 55488 55<br>
                             <strong>Email:</strong> info@example.com<br>
@@ -103,8 +101,8 @@
                         </div>
                 </div>
                     <div class="col-lg-6 col-md-6 footer-newsletter">
-                        <h4  class="text-danger">Our Newsletter</h4>
-                        <p>We think you would love our Newsletter, Subscribe now!</p>
+                        <h4  class="text-danger write">Our Newsletter</h4>
+                        <p class="write">We think you would love our Newsletter, Subscribe now!</p>
                         <form action="" method="post">
                         <input type="email" name="email"><input type="submit" class=" p-1 rounded-pill btn-danger" value="Subscribe">
                         </form>
