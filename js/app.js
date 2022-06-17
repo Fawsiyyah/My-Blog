@@ -13,32 +13,15 @@ function getPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
     .then((data) => {
-    console.log(data)
+    console.log(postBox)
 
-    let postHolder = ''
-    postBox = data;
-    postBox.forEach(post => {
-        postHolder += `
-       <div class="col-md-6 col-lg-4 mb-3">
-                        <div class="card bg-dark">
-                            <div class="card-body text-light">
-                                <p>${post.id}</p>
-                                <h4 id="post-title" class="text-center text-primary">${post.title}</h4>
-                                <p id="post-body">${post.body}</p>
-                                <div class="d-flex justify-content-between">
-                                    <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
-                                    <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
-                                    <button class="btn btn-outline-primary" onclick="viewPost"(${post.id})">View post</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `
-    });
-    postWrapper.innerHTML = postHolder;
-  });
+    //let postHolder = ''
+    postBox = data
+    renderUI(postBox)
+  })
 
 }
+
 getPosts();
 
 //create post
@@ -73,8 +56,9 @@ function createPost(e) {
                             <h6 id="post-title">${post.title}</h6>
                             <p id="post-body">${post.body}</p>
                             <div class="d-flex justify-content-between">
-                                <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
+                                 <button class="btn btn-outline-primary" id="view-btn onclick="viewPost(${post.id})">View</button>
+                                 <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
+                                <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
                             </div>
                         </div>
                     </div>
@@ -93,37 +77,42 @@ function updatePost(id) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-        id: id,
-        title: title.value,
-        body: body.value,
-        userId: 1,
+            id: id,
+            title: title.value,
+            body: body.value,
+            userId: 1,
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-    .then((response) => response.json())
-    .then((data)=> {
-        console.log(data)
-        let postTitles = document.querySelectorAll('.post-title')
-        let postBodies = document.querySelectorAll('.post-body')
-        console.log(postTitles)
-        postTitles.forEach((postTitle, index) => {
-            if (index + 1 === id) {
-                if (data.title !== ""){
-                    postTitle.innerHTML = data.title
-                }
-            }
-        })
+        .then((response) => response.json())
+        .then((data) => {
 
-        postBodies.forEach((postBody, index) => {
-            if (index + 1 === id) {
-                if (data.body !== "") {
-                    postBody.innerHTML = data.body
+            console.log(data)
+            let postTitles = document.querySelectorAll('#post-title') // 100 post titles [0 -99]
+            let postBodies = document.querySelectorAll('#post-body')
+            console.log(postTitles)
+            postTitles.forEach((postTitle, index) => {
+                if (index + 1 === id) {
+                    if (data.title !== "") {
+                        postTitle.innerHTML = data.title
+                    }
                 }
-            }
-        })
-    });
+
+            })
+
+            postBodies.forEach((postBody, index) => {
+                if (index + 1 === id) {
+                    if (data.body !== "") {
+                        postBody.innerHTML = data.body
+                    }
+                }
+
+            })
+             
+        });
+
 }
 
 function openSpace(id) {
@@ -137,18 +126,6 @@ function openSpace(id) {
     });
 }
 
-function renderSingle() {
-    let newObject = localStorage.getItem('viewedPost')
-    console.log(newObject);
-    let post = JSON.parse(newObject)
-    console.log(post)
-    // console.log(post.title)
-    document.getElementById('post-id').innerHTML = post.id
-    document.getElementById('post-title').innerHTML = post.title
-    document.getElementById('post-body').innerHTML = post.body
-}
-
-renderSingle();
 
 //delete post
 
@@ -180,7 +157,7 @@ function deletePost(id) {
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-outline-primary" onclick="updatePost(${post.id})">Update</button>
                                     <button class="btn btn-outline-danger" onclick="deletePost(${post.id})">Delete</button>
-                                    <button class="btn btn-outline-primary" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
+                                    <button class="btn btn-outline-primary" id="view-btn" onclick="viewPost"(${post.id})"><a href="resource.html">View post</a></button>
                              </div>
                             </div>
                         </div>
