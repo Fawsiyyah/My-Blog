@@ -54,6 +54,9 @@
     .small-text, .name, .mo-button {
         font-size: 10px;
     }
+    .herd {
+        font-size: 8px;
+    }
 }
 
 @media(max-width:320px){

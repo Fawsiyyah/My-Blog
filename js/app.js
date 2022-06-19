@@ -90,7 +90,7 @@ function updatePost(id) {
         .then((data) => {
 
             console.log(data)
-            let postTitles = document.querySelectorAll('#post-title') // 100 post titles [0 -99]
+            let postTitles = document.querySelectorAll('#post-title') 
             let postBodies = document.querySelectorAll('#post-body')
             console.log(postTitles)
             postTitles.forEach((postTitle, index) => {
@@ -155,9 +155,9 @@ function deletePost(id) {
                                 <h4 id="post-title" class="text-center text-primary">${post.title}</h4>
                                 <p id="post-body" class="blog">${post.body}</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-outline-primary write" onclick="updatePost(${post.id})">Update</button>
+                                <button class="btn btn-outline-danger write" onclick="updatePost(${post.id})">Update</button>
                                     <button class="btn btn-outline-danger write" onclick="deletePost(${post.id})">Delete</button>
-                                    <button class="btn btn-outline-primary write" id="view-btn" onclick="viewPost"(${post.id})"><a href="resource.html" class="create-btn">View post</a></button>
+                                    <a href="resource1.html?id=${post.id}"><button class="btn btn-outline-primary write">View Post</button></a>
                              </div>
                             </div>
                         </div>
