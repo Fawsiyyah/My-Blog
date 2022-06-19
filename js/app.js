@@ -13,7 +13,7 @@ function getPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
     .then((data) => {
-    console.log(postBox)
+   
 
     //let postHolder = ''
     postBox = data
@@ -29,7 +29,7 @@ postForm.addEventListener('submit', createPost)
 
 function createPost(e) {
     e.preventDefault();
-    // console.log(title.value, body.value)
+    
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
@@ -43,9 +43,9 @@ function createPost(e) {
     })
     .then((response) => response.json())
     .then((data)=> {
-        console.log(data)
+        
         postBox.unshift(data)
-        console.log(postBox)
+        
         let postHolder = '';
         postBox.forEach(post => {
             postHolder += `
@@ -72,7 +72,6 @@ function createPost(e) {
 
 //update post
 function updatePost(id) {
-    console.log(id)
 
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: 'PUT',
@@ -92,7 +91,6 @@ function updatePost(id) {
             console.log(data)
             let postTitles = document.querySelectorAll('#post-title') 
             let postBodies = document.querySelectorAll('#post-body')
-            console.log(postTitles)
             postTitles.forEach((postTitle, index) => {
                 if (index + 1 === id) {
                     if (data.title !== "") {
@@ -135,10 +133,8 @@ function deletePost(id) {
     }) 
     .then((response) => response.json())
     .then((data) => {
-    console.log(data)
-    postBox = postBox.filter(post => post.id !== id)
-    console.log(postBox)
-    
+        postBox = postBox.filter(post => post.id !== id)
+        
     renderUI(postBox)
     })
 }

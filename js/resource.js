@@ -1,5 +1,4 @@
 let resourceId = new URLSearchParams(window.location.search).get("id");
-console.log(resourceId);
 
 let postWrapper = document.querySelector('#resource-1');
 
@@ -11,9 +10,8 @@ function getPosts() {
     fetch(`https://jsonplaceholder.typicode.com/posts?id=${resourceId}`)
     .then((response) => response.json())
     .then((data) => {
-    console.log(postBox)
-
     
+
     postBox = data
     renderUI(postBox)
   })
