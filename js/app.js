@@ -1,4 +1,4 @@
-let postWrapper = document.querySelector('#post-holder');
+let postContainer = document.querySelector('#post-holder');
 let postForm = document.querySelector('#post-form')
 let title = document.querySelector('#title')
 let body = document.querySelector('#body')
@@ -62,7 +62,7 @@ function createPost(e) {
                 </div>
            `
         });
-        postWrapper.innerHTML = postHolder;
+        postContainer.innerHTML = postHolder;
     })
 }
 
@@ -119,7 +119,7 @@ function updatePost(id) {
         window.location.href = 'myspace.html'
         //console.log(data)
     });
-//}*/
+}*/
 
 
 //delete post
@@ -157,5 +157,5 @@ function deletePost(id) {
                     </div>
                  `
     });
-    postWrapper.innerHTML = postHolder;
+    postContainer.innerHTML = postHolder;
 }

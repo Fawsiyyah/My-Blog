@@ -1,6 +1,6 @@
 let resourceId = new URLSearchParams(window.location.search).get("id");
 
-let postWrapper = document.querySelector('#resource-1');
+let postContainer = document.querySelector('#resource-1');
 
 let postBox = [];
 
@@ -36,5 +36,5 @@ function renderUI (arr) {
                </div>
              `
 });
-postWrapper.innerHTML = resourceId;
+postContainer.innerHTML = resourceId;
 }
